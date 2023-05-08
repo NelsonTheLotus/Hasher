@@ -33,6 +33,11 @@ struct SHA256
     using entry_address = uint_least8_t;    //Max words/block = 2^4 (=16)
 
     using digest = uint[8];
+
+    static const uint blockBitSize = 512;
+    static const uint wordBitSize = 32; 
+    static const uint numBlockEntries = 16;
+    
 };
 
 struct SHA512
@@ -45,4 +50,8 @@ struct SHA512
     using entry_address = uint_least8_t;    //Max words/block = 2^4 (=16)
 
     using digest = uint[16];
+
+    static const uint blockBitSize = 1024;
+    static const uint wordBitSize = 64; 
+    static const uint numBlockEntries = 16;
 };

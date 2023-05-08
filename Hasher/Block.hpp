@@ -19,7 +19,7 @@ using entry_address = typename HashType::entry_address;
 private:
     block_address blockID;
 
-    word dataBlock[16];
+    word dataBlock[HashType::numBlockEntries];
     class MessageBlock* nextBlock;
 
 public:

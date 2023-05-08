@@ -24,7 +24,7 @@ using digest = typename HashType::digest;
     }
     std::cout<<std::endl;
 
-    //MessageBlock blockSchedule = MessageBlock<HashType>(fullData)
+    MessageBlock<HashType> blockSchedule(fullData);
     return std::shared_ptr<digest>(nullptr);
 }
 
