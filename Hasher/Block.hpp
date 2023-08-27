@@ -29,3 +29,5 @@ public:
     std::vector<word> getBlockData(block_address blockID);
     word getWord(entry_address lineID, block_address blockID = 0);
 };
+
+#include "Block.tpp"

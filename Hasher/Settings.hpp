@@ -8,7 +8,3 @@ typedef unsigned int uint;
 typedef unsigned short ushort;
 typedef unsigned char uchar;
 
-
-/*int size;
-#define MAX_MESSAGE_LENGTH_b *(&size);*/
-

@@ -40,6 +40,8 @@ using block_address = typename HashType::block_address;
     uint wordsize_b = sizeof(word);
     uint parsePerWord = wordsize_b/sizeof(char);
 
+    std::cout<<"wordByte: "<<parsePerWord<<std::endl;
+
     std::vector<word> wordList = {};
     word entry = 0;
     uint wordIndex = 0;
@@ -47,21 +49,17 @@ using block_address = typename HashType::block_address;
 
     uchar currentChar = charData[charIndex];
     while(charIndex++ != charData.size())
-    {
-
-        /*std::cout<<"Entry: "<<std::bitset<sizeof(word)*8>(entry)<<std::endl;
-        std::cout<<"Char: "<<std::bitset<sizeof(char)*8>(currentChar)<<std::endl;
-        std::cout<<"Indexes (word;char): "<<wordIndex<<" ; "<<charIndex<<std::endl;*/
-
+    {     
         entry <<= 8;
         entry += currentChar;
         
-        if(wordIndex++ == parsePerWord)
+        if(++wordIndex == parsePerWord)
         {
             wordList.push_back(entry);
             entry = 0;
             wordIndex = 0;
         }
+        
         currentChar = charData[charIndex];
     }
 
