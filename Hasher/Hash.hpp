@@ -13,5 +13,8 @@ std::shared_ptr<typename HashType::digest> hash(std::string input);
 template<class HashType>
 std::vector<typename HashType::word> getWords(std::string charData);
 
+template<class HashType>
+status padToBlocks(std::vector<typename HashType::words> &inputWords);
+
 
 #include "Hash.tpp"

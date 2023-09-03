@@ -1,3 +1,4 @@
+//#include "Hash.hpp"
 
 #include <memory>
 #include <vector>
@@ -70,4 +71,14 @@ using block_address = typename HashType::block_address;
     }
 
     return wordList;
+}
+
+
+template<class HashType>
+status padToBlocks(std::vector<typename HashType::words> &inputWords)
+{
+using word = typename HashType::word;
+using block_address = typename HashType::block_address;
+
+
 }
